@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prepperoni</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="badge">Startup interview question oven</div>
+      <h1 id="page-title">Prepperoni</h1>
+      <p>
+        Feed it a role. Get three interview questions with actual signal, fewer beige corporate vibes,
+        and just enough personality to keep the room awake.
+      </p>
+    </section>
+
+    <section class="workspace" aria-label="Question generator">
+      <form id="question-form" class="generator">
+        <label for="job-title">Job title</label>
+        <div class="input-row">
+          <input
+            id="job-title"
+            name="jobTitle"
+            type="text"
+            value="Customer Success Manager"
+            maxlength="80"
+            autocomplete="off"
+            required>
+          <button id="submit-button" type="submit">Bake questions</button>
+        </div>
+        <p class="hint">Try: Founding Engineer, Product Designer, Account Executive, or your next brave hire.</p>
+      </form>
+
+      <div id="status" class="status" role="status" aria-live="polite"></div>
+      <div id="results" class="results" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
